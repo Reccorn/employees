@@ -1,0 +1,20 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-width: 267px;
+	margin-right: -140px;
+	padding: 55px 32px;
+	border-radius: 56px;
+	background: linear-gradient(180deg, #54d3c2 0%, #30898a 100%);
+
+	.logo {
+		display: flex;
+		margin-bottom: 70px;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		width: fit-content;
+	}
+}

@@ -1,0 +1,29 @@
+@import "../../css/vars.global.scss";
+
+.item {
+	position: relative;
+	display: flex;
+
+	input {
+		padding: 9px 22px 9px 47px;
+		border-radius: 24px;
+		background-color: $color_bg_elem;
+		outline: none;
+		border: 0;
+		font-size: 16px;
+		line-height: 32px;
+		color: $color_title;
+
+		&::placeholder {
+			color: $color_text;
+		}
+	}
+
+	span {
+		position: absolute;
+		left: 22px;
+		top: 16px;
+		z-index: 1;
+		pointer-events: none;
+	}
+}

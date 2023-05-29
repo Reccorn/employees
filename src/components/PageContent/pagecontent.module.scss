@@ -1,0 +1,9 @@
+@import "../../css/vars.global.scss";
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: calc(100% - 127px);
+	background-color: $color_white;
+	border-radius: 56px;
+}

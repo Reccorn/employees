@@ -1,0 +1,29 @@
+@import "../../css/vars.global.scss";
+
+.item {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 40px 35px;
+	background-color: $color_white;
+	border-radius: 32px;
+	margin-bottom: 80px;
+
+	.contacts {
+		display: flex;
+		align-items: center;
+		margin-right: 40px;
+		font-size: 12px;
+		line-height: 44px;
+
+		span {
+			margin-right: 14px;
+			font-size: 28px;
+			color: $color_primary;
+		}
+	}
+
+	.actions {
+		margin-left: auto;
+	}
+}

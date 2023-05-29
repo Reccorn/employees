@@ -1,0 +1,85 @@
+@import "../../css/vars.global.scss";
+
+.block {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+	cursor: pointer;
+
+	&.active {
+		.icon {
+			rotate: 180deg;
+		}
+
+		.dropdown {
+			translate: 0 0;
+			opacity: 1;
+			pointer-events: all;
+		}
+	}
+
+	.avatar {
+		width: 56px;
+		height: 56px;
+		margin-right: 23px;
+		border-radius: 50px;
+
+		img {
+			width: 100%;
+			object-fit: cover;
+			border-radius: 50px;
+		}
+	}
+
+	.info {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+
+		.name {
+			display: block;
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 24px;
+			color: $color_title;
+		}
+
+		.position {
+			font-size: 14px;
+			line-height: 20px;
+			color: $color_title;
+			opacity: 0.65;
+		}
+	}
+
+	.icon {
+		margin-left: 143px;
+		transition: 0.3s;
+	}
+
+	.dropdown {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 105%;
+		padding: 15px;
+		z-index: 10;
+		translate: 0 10%;
+		opacity: 0;
+		transition: 0.3s;
+		background-color: $color_white;
+		border-radius: 10px;
+		box-shadow: 0px 10px 63px 0px rgba(0, 0, 0, 0.07);
+		pointer-events: none;
+		border: 1px solid $color_bg_main;
+
+		ul {
+			li {
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}

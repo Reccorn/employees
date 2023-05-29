@@ -1,0 +1,22 @@
+@import "../../css/vars.global.scss";
+
+.item {
+	display: flex;
+	justify-content: center;
+	padding: 15px;
+	font-size: 16px;
+	line-height: 20px;
+	color: $color_primary;
+	border: 1.5px solid $color_primary;
+	border-radius: 24px;
+
+	&.active {
+		color: $color_white;
+		background-color: $color_primary;
+	}
+
+	&:hover {
+		color: $color_primary;
+		background-color: rgba(229, 248, 246, 0.5);
+	}
+}

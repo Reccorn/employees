@@ -1,0 +1,221 @@
+@import "vars.global.scss";
+
+@font-face {
+	font-family: "Proxima Nova";
+	src: local("ProximaNova-Semibold"),
+		url("../fonts/ProximaNova-Semibold.eot") format("opentype"),
+		url("../fonts/ProximaNova-Semibold.ttf") format("truetype"),
+		url("../fonts/ProximaNova-Semibold.woff") format("woff");
+	font-style: normal;
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: "Proxima Nova";
+	src: local("ProximaNova-Bold"),
+		url("../fonts/ProximaNova-Bold.eot") format("opentype"),
+		url("../fonts/ProximaNova-Bold.ttf") format("truetype"),
+		url("../fonts/ProximaNova-Bold.woff") format("woff");
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: "Proxima Nova";
+	src: local("ProximaNova-Extrabld"),
+		url("../fonts/ProximaNova-Extrabld.eot") format("opentype"),
+		url("../fonts/ProximaNova-Extrabld.ttf") format("truetype"),
+		url("../fonts/ProximaNova-Extrabld.woff") format("woff");
+	font-style: normal;
+	font-weight: 800;
+}
+
+* {
+	box-sizing: border-box;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-family: "Proxima Nova", "Helvetica", sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+
+body {
+	scroll-behavior: smooth;
+	background-color: $color_bg_elem;
+	color: $color_text;
+}
+
+a {
+	text-decoration: none;
+	@include transition();
+}
+
+input {
+	font-family: "Proxima Nova", "Helvetica", sans-serif;
+}
+
+button {
+	font-family: "Proxima Nova", "Helvetica", sans-serif;
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+	outline: none;
+	@include transition();
+}
+
+ul,
+ol {
+	list-style-type: none;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	margin: 0;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+	padding: 100px 0;
+}
+
+.page__body {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: calc(100% - 154px);
+	padding: 27px 40px 328px 40px;
+	border-radius: 56px;
+	background-color: $color_bg_main;
+}
+
+.MuiPaper-root {
+	background-color: transparent !important;
+	box-shadow: none !important;
+
+	.MuiToolbar-root {
+		&:last-child {
+			border-radius: 0 0 32px 32px;
+		}
+	}
+}
+
+.MuiFormControl-root {
+	border: 0;
+
+	.MuiInputBase-root {
+		height: 48px;
+		border-radius: 24px;
+		border: 0;
+		background-color: $color_bg_elem;
+
+		input {
+			font-family: "Proxima Nova", "Helvetica", sans-serif;
+			padding: 9px 0;
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+		.MuiInputAdornment-root {
+			&:first-child {
+				transform: translateY(-7px);
+			}
+
+			&:last-child {
+				display: none;
+			}
+		}
+
+		&:hover,
+		&::before,
+		&::after {
+			border-bottom: 0 !important;
+		}
+	}
+}
+
+.MuiMenu-paper {
+	background-color: $color_white !important;
+}
+
+.MuiTable {
+	&Head-root {
+		.MuiTableRow-root {
+			&:first-child {
+				.MuiTableCell-root {
+					padding-top: 10px;
+
+					&:first-child {
+						border-top-left-radius: 32px;
+					}
+
+					&:last-child {
+						border-top-right-radius: 32px;
+					}
+				}
+
+				.Mui-TableHeadCell-Content {
+					justify-content: center !important;
+				}
+			}
+
+			&:last-child {
+				.Mui-TableHeadCell-Content {
+					justify-content: space-between !important;
+				}
+			}
+		}
+
+		.MuiTableCell-root {
+			font-weight: 700;
+			font-size: 12px;
+			line-height: 14px;
+			color: $color_primary !important;
+		}
+	}
+
+	&Body-root {
+		.MuiTableRow-root {
+			&:nth-child(odd) {
+				background-color: rgba(248, 248, 248, 0.3);
+			}
+
+			&:nth-child(even) {
+				.MuiTableCell-root {
+					&:first-child {
+						background-color: $color_white;
+					}
+
+					&:not(:first-child) {
+						background-color: rgba(229, 248, 246, 0.5);
+					}
+				}
+			}
+		}
+	}
+
+	&Cell-root {
+		font-family: "Proxima Nova", "Helvetica", sans-serif !important;
+		font-size: 12px !important;
+		color: $color_text !important;
+		border: 1.5px solid #f8f8f8 !important;
+	}
+}
+
+.MuiTablePagination-selectLabel {
+	font-family: "Proxima Nova", "Helvetica", sans-serif !important;
+	color: $color_text !important;
+}

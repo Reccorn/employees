@@ -1,0 +1,10 @@
+$color_white: #fff;
+$color_title: #323f47;
+$color_text: #6d7986;
+$color_primary: #54d3c2;
+$color_bg_main: #f5f5f5;
+$color_bg_elem: #f8f8f8;
+
+@mixin transition() {
+	transition: 0.2s ease-in-out;
+}

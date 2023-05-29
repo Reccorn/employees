@@ -1,0 +1,39 @@
+.block {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 64px;
+	height: 64px;
+	border-radius: 16px;
+	transition: 0.3s;
+
+	a {
+		display: flex;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+
+		span {
+			translate: 0 2px;
+		}
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	&:hover {
+		background-color: rgba(169, 233, 224, 0.45);
+	}
+
+	&.active {
+		background-color: rgba(169, 233, 224, 0.75);
+	}
+}
