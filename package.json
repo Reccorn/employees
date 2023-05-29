@@ -25,7 +25,6 @@
 		"@types/react-dom": "^18.0.11",
 		"@types/react-redux": "^7.1.25",
 		"@types/react-router-dom": "^5.3.3",
-		"@types/swiper": "^6.0.0",
 		"@typescript-eslint/eslint-plugin": "^5.57.1",
 		"@typescript-eslint/parser": "^5.57.1",
 		"@vitejs/plugin-react": "^4.0.0",
